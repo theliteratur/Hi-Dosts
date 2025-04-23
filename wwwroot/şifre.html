@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi-Dost | Giriş</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #232526, #414345);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi-Dost'a Hoş Geldin</h1>
+    <input type="password" id="passwordInput" placeholder="Şifreni gir dostum">
+    <button onclick="kontrolEt()">Giriş Yap</button>
+    <div id="errorMessage" class="error"></div>
+
+    <script>
+        function kontrolEt() {
+            const password = document.getElementById("passwordInput").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            // Şifreyi kontrol edelim (örnek şifreler)
+            if (password === "elif123") {
+                window.location.href = "Elif.html";
+            } else if (password === "fatma456") {
+                window.location.href = "Fatma.html";
+            } else if (password === "ela789") {
+                window.location.href = "Ela.html";
+            } else {
+                errorMessage.textContent = "Şifre hatalı. Bir daha dene cano!";
+            }
+        }
+    </script>
+</body>
+</html>
